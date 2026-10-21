@@ -3,7 +3,20 @@ dist/
 build/
 .env
 *.log
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+LegendaryAI_Assistant/venv/
+LegendaryAI_Assistant/memory_store/
+
+# Compiled binaries
+launcher/SZM-AI
+SZM-AI-Assistant
+
+# Data/zip
 memory_store/
 drone-engineering-training-data.zip
+drone-engineering-training-data/
