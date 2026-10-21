@@ -1,0 +1,191 @@
+================================================================================
+PROMPT FOR ENGINEER: AI TRAINING DATA GENERATION
+================================================================================
+
+OBJECTIVE:
+Create a comprehensive JSON knowledge base for a drone & machine engineering AI 
+system. This data will train an AI to understand and predict machine designs, 
+materials, physics, and mechanical systems.
+
+================================================================================
+REQUIREMENTS:
+================================================================================
+
+1. OUTPUT FORMAT: Valid JSON (must pass JSON validation)
+
+2. STRUCTURE:
+{
+  "metadata": {
+    "version": "1.0",
+    "totalSkills": [NUMBER],
+    "categories": ["Physics", "Materials", "Mechanics", "Circuits", "Aerodynamics", "Control_Systems"],
+    "createdAt": "[DATE]"
+  },
+  "skills": [
+    {
+      "id": "skill_[001-999]",
+      "title": "[Exact skill name]",
+      "category": "[One of the above]",
+      "description": "[2-3 sentences explaining the skill]",
+      "keyPoints": ["[point1]", "[point2]", "[point3]", "[point4]"],
+      "formulas": ["[Formula with variables]", "[Another formula if applicable]"],
+      "specifications": {
+        "[property_name]": "[value with unit]",
+        "[property_name]": "[value with unit]"
+      },
+      "applications": ["[Real-world application]", "[Use case in drones]", "[Use case in machines]"],
+      "relatedSkills": ["skill_[ID]", "skill_[ID]"],
+      "complexity": [1-10 scale],
+      "source": "[Reference/Standard]"
+    }
+  ]
+}
+
+================================================================================
+CONTENT REQUIREMENTS: Minimum 15 Skills
+================================================================================
+
+CATEGORY A: PHYSICS (4 skills)
+Required Skills:
+  1. Lift & Drag Forces - How rotors generate thrust
+  2. Newton's Laws of Motion - F=ma applied to drones
+  3. Energy & Power Calculations - Battery drain, motor power
+  4. Center of Gravity & Mass Distribution - Weight balance
+
+CATEGORY B: MATERIALS (4 skills)
+Required Skills:
+  1. Carbon Fiber Properties - Strength, weight, cost
+  2. Aluminum Alloys - 6061-T6, 7075 specifications
+  3. Lithium-ion Battery Specifications - Energy density, discharge rates
+  4. Composite Materials - Glass fiber, Kevlar, durability
+
+CATEGORY C: MECHANICS (4 skills)
+Required Skills:
+  1. Rotor Blade Design - Pitch, diameter, RPM
+  2. Motor Torque & Efficiency - BLDC motors, torque curves
+  3. Frame Structural Design - Load distribution, vibration dampening
+  4. Joint Mechanics - Bolted connections, stress concentration
+
+CATEGORY D: CIRCUITS & ELECTRONICS (2-3 skills)
+Required Skills:
+  1. Motor Control (ESC) - PWM signals, speed control
+  2. Battery Management Systems - Voltage regulation, load balancing
+  3. Sensor Integration - Gyro, accelerometer, barometer
+
+CATEGORY E: AERODYNAMICS (2-3 skills)
+Required Skills:
+  1. Propeller Efficiency - Pitch angle, blade loading
+  2. Flight Stability - Center of lift vs center of gravity
+  3. Wind Resistance & Drag - Area coefficient, air resistance
+
+CATEGORY F: CONTROL SYSTEMS (Optional, 1-2 skills)
+  1. PID Control Loops - Stabilization algorithms
+  2. IMU Calibration - Sensor fusion, gyroscope drift
+
+================================================================================
+EACH SKILL MUST INCLUDE:
+================================================================================
+
+ID: Unique identifier (skill_001, skill_002, etc.)
+
+TITLE: Clear, specific name (3-5 words)
+
+DESCRIPTION: 2-3 technical sentences explaining what it is
+
+KEY POINTS: 4-5 critical facts/principles (bullet points)
+
+FORMULAS: 
+  - Physics skills: Include actual equations with variable definitions
+  - Material skills: Include property equations if applicable
+  - Mechanics skills: Include stress/strain calculations
+
+SPECIFICATIONS:
+  - For materials: density, tensile strength, cost, weight
+  - For physics: constants, air density, gravity
+  - For electronics: voltage, current, power ratings
+  - For mechanics: dimensions, material properties, tolerances
+
+APPLICATIONS:
+  - Real-world use in drones
+  - Real-world use in machines
+  - Specific design scenarios
+
+RELATED SKILLS: 
+  - Link to 2-3 other related skills by ID
+  - Example: Physics skills connect to Mechanics
+
+COMPLEXITY:
+  1-3: Beginner level
+  4-6: Intermediate level
+  7-9: Advanced level
+  10: Expert/Research level
+
+SOURCE:
+  - Engineering standard (ISO, ASTM)
+  - Textbook reference
+  - Industry standard
+  - Research paper
+
+================================================================================
+EXAMPLE SKILL (FULLY FILLED):
+================================================================================
+
+{
+  "id": "skill_001",
+  "title": "Lift Force Calculation",
+  "category": "Physics",
+  "description": "Lift is the aerodynamic force generated perpendicular to airflow direction, proportional to air density, velocity squared, and blade area. Critical for calculating drone thrust requirements and load capacity.",
+  "keyPoints": [
+    "Lift force increases with square of velocity (doubling speed = 4x lift)",
+    "Proportional to rotor disk area and blade shape",
+    "Depends on air density (lower at high altitude)",
+    "Generated by pressure difference across blade surfaces",
+    "Must exceed weight of drone + payload for flight"
+  ],
+  "formulas": [
+    "Lift = 0.5 × ρ × v² × A × CL",
+    "Where: ρ=air density (kg/m³), v=velocity (m/s), A=blade area (m²), CL=lift coefficient"
+  ],
+  "specifications": {
+    "air_density_sea_level": "1.225 kg/m³",
+    "air_density_1000m": "1.112 kg/m³",
+    "standard_gravity": "9.81 m/s²",
+    "typical_CL_range": "0.8-1.2 for rotors"
+  },
+  "applications": [
+    "Calculate minimum RPM for hovering",
+    "Determine maximum payload capacity",
+    "Design rotor blade diameter",
+    "Stability analysis during maneuvers"
+  ],
+  "relatedSkills": ["skill_002", "skill_012", "skill_015"],
+  "complexity": 7,
+  "source": "Aerodynamics - Fundamentals and Applications (Anderson)"
+}
+
+================================================================================
+DELIVERABLE CHECKLIST:
+================================================================================
+
+□ Valid JSON format (test at jsonlint.com)
+□ Minimum 15 skills across 5+ categories
+□ Each skill has all required fields
+□ All formulas include variable definitions
+□ Specifications include units (kg, m/s², N, etc.)
+□ Related skills reference valid skill IDs
+□ Complexity ratings are realistic (1-10 scale)
+□ Sources are specific and traceable
+□ No duplicate skill IDs
+□ Technical accuracy in all data
+
+================================================================================
+DELIVERY:
+================================================================================
+
+Copy the ENTIRE JSON (including metadata and all skills) and paste it back here.
+
+Format should be production-ready, validated JSON.
+
+Do NOT include markdown code blocks - JUST the raw JSON.
+
+================================================================================

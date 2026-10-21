@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SZM AI Assistant
+Comment=Desktop shortcut for the SZM Autonomous Offline System
+Exec=/mnt/D/projects/szm-autonomous-offline-system/SZM-AI-Assistant
+Path=/mnt/D/projects/szm-autonomous-offline-system
+Icon=google-chrome
+Categories=Utility;Development;
+Terminal=false
+StartupNotify=true
